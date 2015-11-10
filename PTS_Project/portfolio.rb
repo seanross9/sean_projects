@@ -15,9 +15,8 @@ class Portfolio
 
 	def get_stock_value(list)
 		value = total_return = 0
-		length = list.length
-		(0...length).each do |i|
-			value += list[i].shares * list[i].price
+		list.each do |stock|
+			value += stock.shares * stock.price
 		end
 		value
 	end
